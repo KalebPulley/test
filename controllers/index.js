@@ -1,6 +1,6 @@
 //return data
 function returnData(req, res){
-    const data = "this is for testing purposses right now."
+    const data = "I know Orian Pulley"
     res.send(data);
 }
 module.exports = {
