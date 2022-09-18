@@ -21,7 +21,7 @@ const {ObjectID} = require("mongodb");
 async function returnAll(req, res){
     //connect to the database
     //conection string
-    const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qcchu6m.mongodb.net/test`;
+    const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qcchu6m.mongodb.net/?retryWrites=true&w=majority`;
     const client = new MongoClient(uri);
     try {
       await client.connect();
@@ -40,7 +40,7 @@ async function returnAll(req, res){
 async function returnOne(req, res){
     //connect to the database
     //conection string
-    const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qcchu6m.mongodb.net/test`;
+    const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qcchu6m.mongodb.net/?retryWrites=true&w=majority`;
     const client = new MongoClient(uri);
     try {
       await client.connect();

@@ -7,3 +7,13 @@ GET http://localhost:3000/contact?id=6325ee8b393592eedf4438c7
 GET http://localhost:3000/contact?id=6325ef30393592eedf4438c9 
 ###
 GET http://localhost:3000/contact?id=6325ef84393592eedf4438ca
+###
+GET https://cse341test.onrender.com 
+###
+GET https://cse341test.onrender.com/contacts
+###
+GET https://cse341test.onrender.com/contact?id=6325ee8b393592eedf4438c7
+###
+GET https://cse341test.onrender.com/contact?id=6325ef30393592eedf4438c9 
+###
+GET https://cse341test.onrender.com/contact?id=6325ef84393592eedf4438ca
