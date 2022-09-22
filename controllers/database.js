@@ -84,7 +84,7 @@ async function updateOne(req, res){
     if (!result){
       res.status(404).send("no id found");
     }else{
-      res.status(204);
+      res.status(204).end();
     }
     
   } catch (e) {

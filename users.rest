@@ -10,10 +10,9 @@ GET http://localhost:3000/contact?id=6325ef84393592eedf4438ca
 ###
 POST http://localhost:3000/contacts/create-contact?contact={"firstName":"John","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-PUT http://localhost:3000/contacts/update-by-id?id=6325ef30393592eedf4438c9&contact={"firstName":"Jack","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
+PUT http://localhost:3000/contacts/update-by-id?id=6325ef30393592eedf4438c9&contact={"firstName":"James","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
 DELETE http://localhost:3000/contacts/delete-by-id?id=632bd63545a7b7f772fc0a32
-
 ###
 GET https://cse341test.onrender.com 
 ###
@@ -27,6 +26,6 @@ GET https://cse341test.onrender.com/contact?id=6325ef84393592eedf4438ca
 ###
 POST https://cse341test.onrender.com/contacts/create-contact?contact={"firstName":"John","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-PUT https://cse341test.onrender.com/contacts/update-by-id?id=6325ef30393592eedf4438c9&contact={"firstName":"Jack","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
+PUT https://cse341test.onrender.com/contacts/update-by-id?id=6325ef30393592eedf4438c9&contact={"firstName":"Jacky","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-DELETE https://cse341test.onrender.com/contacts/delete-by-id?id=632bdc5deb8ac86d4f9f076f
+DELETE https://cse341test.onrender.com/contacts/delete-by-id?id=632bdc36eb8ac86d4f9f076e
