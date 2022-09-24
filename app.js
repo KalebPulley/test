@@ -8,10 +8,11 @@ const port = process.env.PORT || 3000;
 dotenv.config();
 
 app.use('/contacts', require('./routes/contacts.js'));
-app.use('/contact', require('./routes/contact.js'));
-app.use('/contacts/create-contact', require('./routes/CreateContact'));
-app.use('/contacts/update-by-id', require('./routes/UpdateContact'));
-app.use('/contacts/delete-by-id', require('./routes/DeleteContact'));
+
+// app.use('/contact', require('./routes/contact.js'));
+// app.use('/contacts/create-contact', require('./routes/CreateContact'));
+// app.use('/contacts/update-by-id', require('./routes/UpdateContact'));
+// app.use('/contacts/delete-by-id', require('./routes/DeleteContact'));
 // app.get('/contacts/one',(req, res)=>{
 //   const route = require('./routes/contacts');
 //   express.Router.get('/', route.AllData);
