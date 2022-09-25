@@ -9,7 +9,7 @@ routes.get('/:get-id', database.returnOne);
 
 routes.post('/', database.createOne);
 
-routes.put('/', database.updateOne);
+routes.put('/update-id', database.updateOne);
 
 routes.delete('/:delete-id', database.deleteOne)
 
