@@ -82,8 +82,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "304": {
+            "description": "Not Modified"
           },
           "404": {
             "description": "Not Found"
