@@ -144,7 +144,7 @@
         }
     },
     "/contacts/delete-id": {
-        "delete": {
+        "DELETE": {
           "description": "delete a contact by id",
           "parameters": [
             {
