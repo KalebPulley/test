@@ -16,7 +16,7 @@
         "responses": {}
       }
     },
-    "/contacts/": {
+    "/contacts": {
       "get": {
         "description": "get all contacts",
         "responses": {
