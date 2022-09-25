@@ -47,21 +47,20 @@ async function createOne(req, res) {
   //conection string
   const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qcchu6m.mongodb.net/?retryWrites=true&w=majority`;
   const client = new MongoClient(uri);
+
+  const contact = {
+    firstName: req.query.firstName,
+    lastName: req.query.lastName,
+    email: req.query.email,
+    favoriteColor: req.query.favoriteColor,
+    birthday: req.query.birthday,
+  };
   try {
     await client.connect();
-    const contact = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      favoriteColor: req.body.favoriteColor,
-      birthday: req.body.birthday
-    };
+    
     //test conection
     //await listDatabases(client);
-    const result = await createOneContact(
-      client,
-      contact
-    );
+    const result = await createOneContact(client, contact);
     if (!result) {
       res.status(404).send("no id found");
     } else {
@@ -80,23 +79,19 @@ async function updateOne(req, res) {
   //conection string
   const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qcchu6m.mongodb.net/?retryWrites=true&w=majority`;
   const client = new MongoClient(uri);
+  const contact = {
+    firstName: req.query.firstName,
+    lastName: req.query.lastName,
+    email: req.query.email,
+    favoriteColor: req.query.favoriteColor,
+    birthday: req.query.birthday,
+  };
   try {
     await client.connect();
     //test conection
-    const contact = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      favoriteColor: req.body.favoriteColor,
-      birthday: req.body.birthday
-    };
     //await listDatabases(client);
-    console.log(req.query.contact);
-    const result = await UpdateOneContact(
-      client,
-      req.params.updateID,
-      contact
-    );
+    console.log(contact);
+    const result = await UpdateOneContact(client, req.params.updateID, contact);
     if (!result) {
       res.status(404).send("no id found");
     } else {
@@ -131,8 +126,6 @@ async function deleteOne(req, res) {
     await client.close();
   }
 }
-
-
 
 //databases get calls
 
