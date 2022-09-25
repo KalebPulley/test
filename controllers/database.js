@@ -49,11 +49,18 @@ async function createOne(req, res) {
   const client = new MongoClient(uri);
   try {
     await client.connect();
+    const contact = {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      favoriteColor: req.body.favoriteColor,
+      birthday: req.body.birthday
+    };
     //test conection
     //await listDatabases(client);
     const result = await createOneContact(
       client,
-      JSON.parse(req.query.contact)
+      contact
     );
     if (!result) {
       res.status(404).send("no id found");
@@ -76,12 +83,19 @@ async function updateOne(req, res) {
   try {
     await client.connect();
     //test conection
+    const contact = {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      favoriteColor: req.body.favoriteColor,
+      birthday: req.body.birthday
+    };
     //await listDatabases(client);
     console.log(req.query.contact);
     const result = await UpdateOneContact(
       client,
       req.params.updateID,
-      JSON.parse(req.query.contact)
+      contact
     );
     if (!result) {
       res.status(404).send("no id found");
