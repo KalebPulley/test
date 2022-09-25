@@ -1,11 +1,6 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const { ObjectID } = require("bson");
 const app = express();
-
-
-
-
 
 //make envirment variable available
 dotenv.config();

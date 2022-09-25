@@ -1,5 +1,7 @@
 GET http://localhost:3000 
 ###
+GET http://localhost:3000/api-docs
+###
 GET http://localhost:3000/contacts
 ###
 GET http://localhost:3000/contacts/get-id?id=6325ee8b393592eedf4438c7
