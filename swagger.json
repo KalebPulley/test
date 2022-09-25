@@ -2,13 +2,26 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Coantacts API",
+    "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "process.env.PORT || 3000",
+  "host": "localhost:3000",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": [
+    "http"
+  ],
   "paths": {
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api-docs": {
       "get": {
         "description": "",
@@ -16,157 +29,111 @@
         "responses": {}
       }
     },
-    "/contacts": {
+    "/contacts/": {
       "get": {
-        "description": "get all contacts",
+        "description": "",
+        "parameters": [],
         "responses": {
           "200": {
             "description": "OK"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       },
       "post": {
-        "description": "create a contact",
+        "description": "",
         "parameters": [
           {
             "name": "contact",
             "in": "query",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
-        "responses": {
-          "201": {
-            "description": "created"
-          },
-          "400": {
-            "description": "Bad Request"
-          },
-          "500": {
-            "description": "Internal Server Error"
-          }
-        }
-      }
-    },
-    "/contacts/get-id": {
-      "get": {
-        "description": "get a contact by id",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "query",
-            "required": true,
             "type": "string"
           }
         ],
         "responses": {
-          "304": {
-            "description": "Not Modified"
+          "201": {
+            "description": "Created"
           },
           "404": {
             "description": "Not Found"
-          },
-          "500": {
-            "description": "Internal Server Error"
           }
         }
       }
     },
-      "/contacts/update-id": {
-        "put": {
-          "description": "update a contact by id",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "query",
-              "required": true,
-              "type": "string"
-            },
-            {
+    "/contacts/{get-id}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "get-id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/contacts/update-id": {
+      "put": {
+        "description": "",
+        "parameters": [
+          {
             "name": "contact",
             "in": "query",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "favoriteColor": {
-                  "example": "any"
-                },
-
-                "birthday": {
-                  "example": "any"
-                }
-              }
-            }
-        }
-          ],
-          "responses": {
-            "204": {
-              "description": "No Content"
-            },
-            "404": {
-              "description": "Not Found"
-            },
-            "500": {
-              "description": "Internal Server Error"
-            }
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "type": "string"
           }
-        }
-    },
-    "/contacts/delete-id": {
-        "DELETE": {
-          "description": "delete a contact by id",
-          "parameters": [
-            {
-              "name": "id",
-              "in": "query",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "OK"
-            },
-            "404": {
-              "description": "Not Found"
-            },
-            "500": {
-              "description": "Internal Server Error"
-            }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "404": {
+            "description": "Not Found"
           }
         }
       }
-    
+    },
+    "/contacts/{delete-id}": {
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "delete-id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "id",
+            "in": "query",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    }
   }
 }
