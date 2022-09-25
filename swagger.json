@@ -5,7 +5,7 @@
     "description": "Coantacts API",
     "version": "1.0.0"
   },
-  "host": "https://cse341test.onrender.com",
+  "host": "cse341test.onrender.com",
   "basePath": "/",
   "schemes": ["http"],
   "paths": {
