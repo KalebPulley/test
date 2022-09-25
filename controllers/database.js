@@ -28,7 +28,7 @@ async function returnOne(req, res) {
     await client.connect();
     //test conection
     //await listDatabases(client);
-    const result = await getOneContact(client, req.query.id);
+    const result = await getOneContact(client, req.params.getID);
     if (!result) {
       res.status(404).send("no id found");
     } else {
@@ -80,7 +80,7 @@ async function updateOne(req, res) {
     console.log(req.query.contact);
     const result = await UpdateOneContact(
       client,
-      req.query.id,
+      req.params.updateID,
       JSON.parse(req.query.contact)
     );
     if (!result) {
@@ -105,7 +105,7 @@ async function deleteOne(req, res) {
     await client.connect();
     //test conection
     //await listDatabases(client);
-    const result = await deleteOneContact(client, req.query.id);
+    const result = await deleteOneContact(client, req.params.deleteID);
     if (!result) {
       res.status(404).send("no id found");
     } else {
@@ -118,27 +118,7 @@ async function deleteOne(req, res) {
   }
 }
 
-async function returnOne(req, res) {
-  //connect to the database
-  //conection string
-  const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.qcchu6m.mongodb.net/?retryWrites=true&w=majority`;
-  const client = new MongoClient(uri);
-  try {
-    await client.connect();
-    //test conection
-    //await listDatabases(client);
-    const result = await getOneContact(client, req.query.id);
-    if (!result) {
-      res.status(404).send("no id found");
-    } else {
-      res.status(200).send(result);
-    }
-  } catch (e) {
-    console.log(e);
-  } finally {
-    await client.close();
-  }
-}
+
 
 //databases get calls
 

@@ -8,26 +8,26 @@ GET http://localhost:3000/contacts/get-id?id=6325ee8b393592eedf4438c7
 ###
 GET http://localhost:3000/contacts/get-id?id=6325ef30393592eedf4438c9 
 ###
-GET http://localhost:3000/contacts/get-id?id=6325ef84393592eedf4438ca
+GET http://localhost:3000/contacts/6325ef84393592eedf4438ca
 ###
 POST http://localhost:3000/contacts/?contact={"firstName":"John","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-PUT http://localhost:3000/contacts/update-id?id=632bda42de2fb3b1f66a0a71&contact={"firstName":"James","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
+PUT http://localhost:3000/contacts/id=632bda42de2fb3b1f66a0a71&contact={"firstName":"James","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-DELETE http://localhost:3000/contacts/delete-id?id=632bda42de2fb3b1f66a0a71
+DELETE http://localhost:3000/contacts/632bda42de2fb3b1f66a0a71
 ###
 GET https://cse341test.onrender.com 
 ###
 GET https://cse341test.onrender.com/contacts
 ###
-GET https://cse341test.onrender.com/contacts/get-id?id=6325ee8b393592eedf4438c7
+GET https://cse341test.onrender.com/contacts/6325ee8b393592eedf4438c7
 ###
-GET https://cse341test.onrender.com/contacts/get-id?id=6325ef30393592eedf4438c9 
+GET https://cse341test.onrender.com/contacts/6325ef30393592eedf4438c9 
 ###
-GET https://cse341test.onrender.com/contacts/get-id?id=6325ef84393592eedf4438ca
+GET https://cse341test.onrender.com/contacts/6325ef84393592eedf4438ca
 ###
 POST https://cse341test.onrender.com/contacts/?contact={"firstName":"John","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
 PUT https://cse341test.onrender.com/contacts/?id=6325ef30393592eedf4438c9&contact={"firstName":"Jacky","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-DELETE https://cse341test.onrender.com/contacts/delete-id?id=632fa6cfa96732be914c2aa1
+DELETE https://cse341test.onrender.com/contacts/632fa6cfa96732be914c2aa1

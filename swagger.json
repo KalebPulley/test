@@ -5,9 +5,11 @@
     "description": "Contacts API",
     "version": "1.0.0"
   },
-  "host": "cse341test.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "http"
+  ],
   "paths": {
     "/": {
       "get": {
@@ -56,19 +58,14 @@
         }
       }
     },
-    "/contacts/{get-id}": {
+    "/contacts/{getID}": {
       "get": {
         "description": "",
         "parameters": [
           {
-            "name": "get-id",
+            "name": "getID",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "id",
-            "in": "query",
             "type": "string"
           }
         ],
@@ -82,17 +79,18 @@
         }
       }
     },
-    "/contacts/update-id": {
+    "/contacts/{updateID}": {
       "put": {
         "description": "",
         "parameters": [
           {
-            "name": "contact",
-            "in": "query",
+            "name": "updateID",
+            "in": "path",
+            "required": true,
             "type": "string"
           },
           {
-            "name": "id",
+            "name": "contact",
             "in": "query",
             "type": "string"
           }
@@ -107,19 +105,14 @@
         }
       }
     },
-    "/contacts/{delete-id}": {
+    "/contacts/{deleteID}": {
       "delete": {
         "description": "",
         "parameters": [
           {
-            "name": "delete-id",
+            "name": "deleteID",
             "in": "path",
             "required": true,
-            "type": "string"
-          },
-          {
-            "name": "id",
-            "in": "query",
             "type": "string"
           }
         ],

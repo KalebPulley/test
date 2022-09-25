@@ -5,13 +5,13 @@ const database = require("../controllers/database");
 //routes.get("/", database.returna);
 
 routes.get("/", database.returnAll);
-routes.get("/:get-id", database.returnOne);
+routes.get("/:getID", database.returnOne);
 
 routes.post("/", database.createOne);
 
-routes.put("/update-id", database.updateOne);
+routes.put("/:updateID", database.updateOne);
 
-routes.delete("/:delete-id", database.deleteOne);
+routes.delete("/:deleteID", database.deleteOne);
 
 //export the module
 module.exports = routes;
