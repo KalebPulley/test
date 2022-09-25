@@ -5,7 +5,7 @@
     "description": "Coantacts API",
     "version": "1.0.0"
   },
-  "host": "cse341test.onrender.com",
+  "host": "process.env.PORT || 3000",
   "basePath": "/",
   "schemes": ["http"],
   "paths": {
@@ -131,8 +131,8 @@
         }
           ],
           "responses": {
-            "200": {
-              "description": "OK"
+            "204": {
+              "description": "No Content"
             },
             "404": {
               "description": "Not Found"
