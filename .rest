@@ -10,9 +10,9 @@ GET http://localhost:3000/contacts/get-id?id=6325ef84393592eedf4438ca
 ###
 POST http://localhost:3000/contacts/?contact={"firstName":"John","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-PUT http://localhost:3000/contacts/update-id?id=632bd62b45a7b7f772fc0a31&contact={"firstName":"James","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
+PUT http://localhost:3000/contacts/update-id?id=632bda42de2fb3b1f66a0a71&contact={"firstName":"James","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-DELETE http://localhost:3000/contacts/delete-id?id=632bd62b45a7b7f772fc0a31
+DELETE http://localhost:3000/contacts/delete-id?id=632bda42de2fb3b1f66a0a71
 ###
 GET https://cse341test.onrender.com 
 ###
