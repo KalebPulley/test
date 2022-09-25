@@ -11,7 +11,7 @@ async function returnAll(req, res){
       //test conection
       //await listDatabases(client);
       const result = await getAllContacts(client);
-      res.send(result);
+      res.status(200).send(result);
     } catch (e) {
       console.log(e);
     } finally {
@@ -33,7 +33,7 @@ async function returnOne(req, res){
       if (!result){
         res.status(404).send("no id found");
       }else{
-        res.send(result);
+        res.status(200).send(result);
       }
       
     } catch (e) {
@@ -133,7 +133,7 @@ async function returnOne(req, res){
     if (!result){
       res.status(404).send("no id found");
     }else{
-      res.send(result);
+      res.status(200).send(result);
     }
     
   } catch (e) {
