@@ -26,8 +26,8 @@ GET https://cse341test.onrender.com/contacts/6325ef30393592eedf4438c9
 ###
 GET https://cse341test.onrender.com/contacts/6325ef84393592eedf4438ca
 ###
-POST https://cse341test.onrender.com/contacts/?contact={"firstName":"John","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
+POST https://cse341test.onrender.com/contacts/{"firstName":"John","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
 PUT https://cse341test.onrender.com/contacts/?id=6325ef30393592eedf4438c9&contact={"firstName":"Jacky","lastName":"doe","email":"john@example.com","favoriteColor":"Blue","birthday":"Jan1"}
 ###
-DELETE https://cse341test.onrender.com/contacts/632fa6cfa96732be914c2aa1
+DELETE https://cse341test.onrender.com/contacts/632bda4fa1f917f1f1da8a7d
